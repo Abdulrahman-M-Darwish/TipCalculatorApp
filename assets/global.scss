@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}
+
+.container {
+  width: 64%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 991px) {
+    width: 80%;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+  caret-color: hsl(172, 67%, 45%);
+  font-size: 24px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 5px;
+  label {
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+  }
+  .holder {
+    position: relative;
+    input {
+      background-color: hsl(189, 41%, 97%);
+      text-align: right;
+      padding: 0 16px;
+      border-radius: 4px;
+      transition: 0.2s;
+      width: calc(100% - 15px);
+      font-weight: 700;
+      color: hsl(177deg, 56%, 17%);
+      &:focus {
+        outline: 2px solid hsl(172, 67%, 45%);
+      }
+      &:hover {
+        outline: 2px solid hsl(172, 67%, 45%);
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+    }
+  }
+}
